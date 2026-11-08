@@ -23,13 +23,30 @@ function render() {
   for (const item of visible) {
     const card = document.createElement("article");
     card.className = "card";
-    if (item.image) {
-      const img = document.createElement("img");
-      img.src = item.image;
-      img.alt = item.imageAlt || "";
-      img.loading = "lazy";
-      card.append(img);
+
+    // Approved image and video display copies share the same framed media area.
+    if (item.image || item.video) {
+      const frame = document.createElement("div");
+      frame.className = "media-frame";
+      if (item.video) {
+        const video = document.createElement("video");
+        video.src = item.video;
+        video.controls = true;
+        video.preload = "metadata";
+        video.playsInline = true;
+        video.setAttribute("aria-label", item.videoAlt || `Video: ${item.title}`);
+        if (item.poster) video.poster = item.poster;
+        frame.append(video);
+      } else {
+        const img = document.createElement("img");
+        img.src = item.image;
+        img.alt = item.imageAlt || `Image: ${item.title}`;
+        img.loading = "lazy";
+        frame.append(img);
+      }
+      card.append(frame);
     }
+
     const body = document.createElement("div");
     body.className = "card-body";
     const heading = document.createElement("h3");
