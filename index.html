@@ -3,28 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A public gallery for carefully reviewed weather evidence and supporting materials.">
+  <meta name="description" content="Weather Evidence Gallery — explore sourced weather imagery, radar, satellite data, alerts, observations, and documented weather events.">
   <title>Weather Evidence Gallery</title>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <p class="eyebrow">PUBLIC INFORMATION PROJECT</p>
-    <h1>Weather Evidence Gallery</h1>
-    <p class="intro">A place for clearly sourced weather materials, documented context, and careful review.</p>
+    <p class="eyebrow">WEATHER • RESEARCH • DOCUMENTATION</p>
+    <h1>Weather <span>Evidence</span> Gallery</h1>
+    <p class="intro">A visual collection of weather data, maps, imagery, alerts, and documented atmospheric events — brought together with clear sources and context.</p>
+    <div class="header-rule" aria-hidden="true"><span></span></div>
   </header>
+
   <main>
-    <section class="notice" aria-labelledby="policy-title">
-      <h2 id="policy-title">Publication policy</h2>
-      <p>Only material that has been specifically reviewed and approved for public display belongs here. Original evidence, private working files, personal information, and unreviewed material are not published in this gallery.</p>
-      <p>Descriptions should distinguish verified source information from calculations, interpretations, and unknowns. A display here is not, by itself, proof of a cause or conclusion.</p>
+    <section class="welcome-panel" aria-labelledby="welcome-title">
+      <div class="panel-mark" aria-hidden="true">✦</div>
+      <p class="eyebrow">EXPLORE THE COLLECTION</p>
+      <h2 id="welcome-title">Weather tells a story.</h2>
+      <p>Explore the observations, imagery, measurements, and official weather products that help document what happened in the atmosphere and when.</p>
     </section>
-    <section aria-labelledby="gallery-title">
+
+    <section class="scope-section" aria-labelledby="scope-title">
+      <div class="section-title">
+        <p class="eyebrow">WHAT THE GALLERY COVERS</p>
+        <h2 id="scope-title">Weather evidence, from many angles</h2>
+      </div>
+      <div class="scope-grid">
+        <article class="scope-card"><span class="scope-icon" aria-hidden="true">◉</span><h3>Radar imagery</h3><p>Reflectivity, velocity, storm structure, and radar scans.</p></article>
+        <article class="scope-card"><span class="scope-icon" aria-hidden="true">☁</span><h3>Satellite imagery</h3><p>Cloud patterns, atmospheric features, and satellite observations.</p></article>
+        <article class="scope-card"><span class="scope-icon" aria-hidden="true">⚑</span><h3>Warnings &amp; alerts</h3><p>Weather warnings, watches, advisories, and official statements.</p></article>
+        <article class="scope-card"><span class="scope-icon" aria-hidden="true">⌁</span><h3>Weather observations</h3><p>Surface reports, measurements, station data, and observations.</p></article>
+        <article class="scope-card"><span class="scope-icon" aria-hidden="true">✈</span><h3>Aviation weather</h3><p>Flight-weather products, pilot reports, and relevant atmospheric conditions.</p></article>
+        <article class="scope-card"><span class="scope-icon" aria-hidden="true">▤</span><h3>Maps &amp; timelines</h3><p>Geographic context, event timelines, and sourced supporting material.</p></article>
+      </div>
+    </section>
+
+    <section class="gallery-section" aria-labelledby="gallery-title">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">REVIEWED MATERIALS</p>
+          <p class="eyebrow">BROWSE THE COLLECTION</p>
           <h2 id="gallery-title">Gallery</h2>
+          <p class="section-subtitle">Images, video, maps, and documented weather materials.</p>
         </div>
         <label class="search-label">Search materials
           <input id="search" type="search" placeholder="Search title or description" autocomplete="off">
@@ -32,12 +52,15 @@
       </div>
       <div id="filters" class="filters" aria-label="Filter by category"></div>
       <div id="gallery" class="gallery" aria-live="polite">
-        <p class="empty-state">No materials have been approved for public display yet.</p>
+        <p class="empty-state">The collection is being prepared. Reviewed gallery materials will appear here.</p>
       </div>
     </section>
   </main>
+
   <footer>
-    <p>Weather Evidence Gallery · Public materials only</p>
+    <div class="footer-rule" aria-hidden="true"></div>
+    <p class="footer-title">Weather Evidence Gallery</p>
+    <p>Weather data • Imagery • Documentation • Context</p>
   </footer>
 </body>
 </html>
