@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A public gallery for carefully reviewed weather evidence and supporting materials.">
+  <title>Weather Evidence Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">PUBLIC INFORMATION PROJECT</p>
+    <h1>Weather Evidence Gallery</h1>
+    <p class="intro">A place for clearly sourced weather materials, documented context, and careful review.</p>
+  </header>
+  <main>
+    <section class="notice" aria-labelledby="policy-title">
+      <h2 id="policy-title">Publication policy</h2>
+      <p>Only material that has been specifically reviewed and approved for public display belongs here. Original evidence, private working files, personal information, and unreviewed material are not published in this gallery.</p>
+      <p>Descriptions should distinguish verified source information from calculations, interpretations, and unknowns. A display here is not, by itself, proof of a cause or conclusion.</p>
+    </section>
+    <section aria-labelledby="gallery-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">REVIEWED MATERIALS</p>
+          <h2 id="gallery-title">Gallery</h2>
+        </div>
+        <label class="search-label">Search materials
+          <input id="search" type="search" placeholder="Search title or description" autocomplete="off">
+        </label>
+      </div>
+      <div id="filters" class="filters" aria-label="Filter by category"></div>
+      <div id="gallery" class="gallery" aria-live="polite">
+        <p class="empty-state">No materials have been approved for public display yet.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Weather Evidence Gallery · Public materials only</p>
+  </footer>
+</body>
+</html>
